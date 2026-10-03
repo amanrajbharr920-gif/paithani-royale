@@ -1,0 +1,10 @@
+{
+  "description": "Connect directly with verified Paithani saree makers to discover, compare, and purchase authentic luxury sarees with secure communication and personalized shopping.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

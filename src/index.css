@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-gold: #C9A84C;
+  --color-gold-light: #DFB86A;
+  --color-gold-pale: #F5EDD3;
+  --color-gold-dark: #9A7A2E;
+  --color-purple: #3D1A5C;
+  --color-purple-mid: #5C2E85;
+  --color-purple-light: #7B4BAA;
+  --color-peacock: #0F5C7A;
+  --color-peacock-light: #1A8AAE;
+  --color-emerald: #1A6B4A;
+  --color-burgundy: #7A1E30;
+  --color-ivory: #FAF7F0;
+  --color-ivory-dark: #F0EAD8;
+  --color-charcoal: #1C1A18;
+  --color-warm-gray: #8A8078;
+  --color-warm-gray-light: #C8C0B4;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Outfit', system-ui, sans-serif;
+}
+
+body {
+  font-family: 'Outfit', system-ui, sans-serif;
+  background-color: #FAF7F0;
+  color: #1C1A18;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.35); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(201,168,76,0.65); }
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.gold-shimmer {
+  background: linear-gradient(90deg, #9A7A2E, #C9A84C, #E8C97A, #C9A84C, #9A7A2E);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 5s linear infinite;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.7s ease both; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+.float-anim { animation: float 7s ease-in-out infinite; }
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0); }
+  50%       { box-shadow: 0 0 0 6px rgba(201,168,76,0.2); }
+}
+.pulse-gold { animation: pulse-gold 2.5s ease-in-out infinite; }
+
+/* Paithani motif SVG bg pattern */
+.paithani-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C9A84C' fill-opacity='0.07'%3E%3Cellipse cx='40' cy='40' rx='12' ry='18'/%3E%3Ccircle cx='40' cy='40' r='4'/%3E%3Cpath d='M40 22 L40 14 M28 28 L22 22 M52 28 L58 22 M28 52 L22 58 M52 52 L58 58 M40 58 L40 66'/%3E%3C/g%3E%3C/svg%3E");
+}
