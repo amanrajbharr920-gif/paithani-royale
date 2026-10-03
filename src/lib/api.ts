@@ -3,7 +3,7 @@
  * Base URL defaults to http://localhost:4000 — override with VITE_API_URL env var.
  */
 
-const BASE = (import.meta.env.VITE_API_URL as string | undefined) ?? 'http://localhost:4000';
+const BASE = (import.meta.env.VITE_API_URL as string | undefined) ?? '';
 
 // ─── Low-level fetch wrapper ─────────────────────────────────────────────────
 
